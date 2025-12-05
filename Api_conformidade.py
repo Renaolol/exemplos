@@ -11,7 +11,7 @@ session = requests.Session()
 caminho_cert = r"C:\Users\gcont\OneDrive\Desktop\GCONT.pfx" 
 senha = os.getenv("SENHA_CERTIFICADO")
 session.mount("https://",Pkcs12Adapter(pkcs12_filename=caminho_cert,pkcs12_password=senha))
-url = "https://cff.svrs.rs.gov.br/api/v1/consultas/classTrib"
+url = "https://cff.svrs.rs.gov.br/api/v1/consultas/anexos"
 #Parametros aceitos cst ou NomeCst
 response = session.get(url)
 #Utilizado pprint para uma visualização encadeada
